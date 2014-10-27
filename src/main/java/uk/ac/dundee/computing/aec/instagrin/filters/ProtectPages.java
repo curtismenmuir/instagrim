@@ -120,8 +120,6 @@ public class ProtectPages implements Filter {
                System.out.println("Foward to login");
                 RequestDispatcher rd=request.getRequestDispatcher("/login.jsp");
 		rd.forward(request,response);
-
-            
         }
         Throwable problem = null;
         try {

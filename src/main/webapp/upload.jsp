@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="uk.ac.dundee.computing.aec.instagrim.stores.*" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -17,8 +18,12 @@
         <h2>Your world in Black and White</h2>
         <nav>
             <ul>
-                <li class="nav"><a href="upload.jsp">Upload</a></li>
-                <li class="nav"><a href="/Instagrim/Images/majed">Sample Images</a></li>
+                <%LoggedIn lg = (LoggedIn) session.getAttribute("LoggedIn");%>
+                <li><a href="/Instagrim/Images/<%=lg.getUsername()%>">Your Images</a></li>
+                <li class="nav"><a href="searchProfile.jsp">Search Profiles</a></li>
+                <li class="nav"><a href="searchUserPhotos.jsp">Search Users Photos</a></li>
+                <li class="nav"><a href="/Instagrim/Images/exampleUser">Sample Images</a></li>
+                <li class="nav"><a href="Logout.jsp">Log Out</a></li>
             </ul>
         </nav>
  

@@ -20,8 +20,8 @@
         </header>
         <nav>
             <ul>
-                
-                <li><a href="/Instagrim/Images/majed">Sample Images</a></li>
+                <li><a href="/Instagrim/register.jsp">Register</a></li>
+                <li><a href="/Instagrim/Images/exampleUser">Sample Images</a></li>
             </ul>
         </nav>
        

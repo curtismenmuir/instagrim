@@ -20,7 +20,7 @@
         <nav>
             <ul>
                 
-                <li><a href="/Instagrim/Images/majed">Sample Images</a></li>
+                <li><a href="/Instagrim/Images/exampleUser">Sample Images</a></li>
             </ul>
         </nav>
        
@@ -29,10 +29,14 @@
             <form method="POST"  action="Register">
                 <ul>
                     <li>User Name <input type="text" name="username"></li>
+                    <li>First Name <input type="text" name="first_name"></li>
+                    <li>Last Name <input type="text" name="last_name"></li>
+                    <li>Email <input type="email" name="email"></li>
                     <li>Password <input type="password" name="password"></li>
+                    <li>Profile Description <input type="text" name="profileDescription"></li>
                 </ul>
                 <br/>
-                <input type="submit" value="Regidter"> 
+                <input type="submit" value="Register"> 
             </form>
 
         </article>

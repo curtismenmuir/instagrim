@@ -1,9 +1,8 @@
 <%-- 
-    Document   : index
-    Created on : Sep 28, 2014, 7:01:44 PM
-    Author     : Administrator
+    Document   : editProfile
+    Created on : 26-Oct-2014, 22:18:48
+    Author     : Dreads
 --%>
-
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="uk.ac.dundee.computing.aec.instagrim.stores.*" %>
@@ -22,7 +21,6 @@
         <nav>
             <ul>
 
-               
                     <%
                         
                         LoggedIn lg = (LoggedIn) session.getAttribute("LoggedIn");
@@ -33,7 +31,6 @@
                             <li><a href="/Instagrim/Images/<%=lg.getUsername()%>">Your Images</a></li>
                             <li><a href="searchProfile.jsp">Search Profiles</a></li>
                             <li><a href="searchUserPhotos.jsp">Search Users Photos</a></li>
-                            <li><a href="editProfile.jsp">Edit profile</a></li>
                             <li><a href="Logout.jsp">Log Out</a></li>
                     <%
                         }else{
@@ -44,6 +41,18 @@
                       <%}%>
             </ul>
         </nav>
+        <article>
+            <h3>Update Profile Bio</h3>
+        
+            <form method="POST"  action="updateProfileDescription">
+                <ul>
+                    <li>Username <input type="text" name="username"></li>
+                    <li>Profile Description <input type="text" name="profileDescription"></li>
+                </ul>
+                <br/>
+                <input type="submit" value="Enter"> 
+            </form>
+        </article>
         <footer>
             <ul>
                 <li class="footer"><a href="/Instagrim">Home</a></li>

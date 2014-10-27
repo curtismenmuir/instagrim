@@ -99,7 +99,8 @@ public class Image extends HttpServlet {
         tm.setCluster(cluster);
         java.util.LinkedList<Pic> lsPics = tm.getPicsForUser(User);
         RequestDispatcher rd = request.getRequestDispatcher("/UsersPics.jsp");
-        request.setAttribute("Pics", lsPics);
+        request.setAttribute("Pics", lsPics);        
+        request.getSession().setAttribute("username", User);
         rd.forward(request, response);
 
     }
@@ -153,7 +154,6 @@ public class Image extends HttpServlet {
             RequestDispatcher rd = request.getRequestDispatcher("/upload.jsp");
              rd.forward(request, response);
         }
-
     }
 
     private void error(String mess, HttpServletResponse response) throws ServletException, IOException {
